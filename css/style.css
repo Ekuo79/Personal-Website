@@ -69,22 +69,39 @@ body {
     
     position: relative;
     transition: 4s;
+}
+
+/*different screen size image*/
+@media (max-width: 1200px) {
+    .home {
+        background-image: url('../images/final-image-small.jpg');
+        background-blend-mode: multiply;
+        text-align: center;
+    }
     
 }
 
+@media (max-width: 660px) {
+    .header {
+        padding: 20px 20%;
+    }
+}
+
 .home-content {
-    max-width: 600px;
+    max-width: 800px;
     animation: slideToRight 2s ease forwards;
 }
 
 .home-content h1{
     font-size: 108px;
     font-weight: 700;
-    /*text-shadow: #FC0 1px 0 10px;*/
+    /*text-shadow: #FC0 1px 0 10px; undecided styling*/
 }
 
 .container {
-    display: inline-block
+    display: inline-block;
+    width: 100%;
+
 }
 
 .home-content h3 {
@@ -92,23 +109,10 @@ body {
     font-size: 32px;
     font-weight: 700;
     color: #40e0d0;
-    border-right: 5px solid;
-
     width: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-    animation:
-        typing 4s steps(46),
-        cursor .4s step-end infinite alternate;
+    
 }
 
-@keyframes cursor {
-    50% {border-color: transparent}
-}
-
-@keyframes typing{
-    from {width: 0}
-}
 
 @keyframes slideToRight {
     0% {
@@ -146,7 +150,7 @@ body {
 .content {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    height: 100vh;
+    min-height: 100vh;
     overflow: hidden;
 }
 
@@ -251,6 +255,8 @@ body {
     overflow: hidden;
     text-decoration: none;
     margin-right: 30px;
+    min-width: 160px; 
+    flex-shrink: 0; /* Prevent the button from shrinking */
     
 }
 
@@ -267,7 +273,6 @@ body {
     justify-content: center;
     border-radius: 50%;
     padding: 1rem;
-
 }
 
 .git-icon::after {
@@ -353,11 +358,9 @@ body {
 }
 
 
-
-
 .projects {
     background-color: black;
-    height: 180vh; /*can adjust with more or less projects*/
+    min-height: 180vh; /*can adjust with more or less projects*/
     padding: 100px 0;
 }
 
@@ -383,6 +386,7 @@ body {
     position: relative;
     border-radius: 30px;
     margin: 30px;
+    height: 601px;
 }
 
 .portfolios .portfolio-item .hover-items {
@@ -446,7 +450,7 @@ body {
 /*PokeLute*/
 .portfolios .portfolio-item .hover-items2 {
     width: 50%;
-    height: 87%;
+    height: 84%;
     background-color: #081b29;
     position: absolute;
     left: 0;
@@ -550,9 +554,15 @@ audio {
     padding-bottom: 15px;
 }
 
+@media (max-width: 1300px) {
+    .portfolios {
+        grid-template-columns: repeat(1, 1fr); /* Change to a single column */
+    }
+}
+
 .contact {
     background-color: inherit;
-    height: 100vh;
+    min-height: 100vh;
     padding: 100px 0;
     text-align: center;
     display: flex;
@@ -631,7 +641,7 @@ audio {
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 10%;
+    min-height: 10%;
 }
 
 .details{
