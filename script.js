@@ -1,3 +1,16 @@
+//type animation
+var str = 'Aspiring Full Stack Developer & Data Scientist';
+
+var spans = '<span>' + str.split('').join('</span><span>') + '</span>';
+$(spans).hide().appendTo('.css-typing').each(function (i) {
+    $(this).delay(100 * i).css({
+        display: 'inline',
+        opacity: 0
+    }).animate({
+        opacity: 1
+    }, 100);
+});
+
 //scroll sections
 
 window.onscroll= () => {
@@ -71,6 +84,7 @@ links.forEach(link => {
 
 window.addEventListener('load', setActiveSection);
 window.addEventListener('scroll', setActiveSection);
+
 
 function sendEmail() {
     console.log('working')
