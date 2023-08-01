@@ -154,6 +154,9 @@ body {
     .header {
         padding: 20px 3%;
     }
+    .home{
+        opacity: 1;
+    }
 }
 
 @media (max-width: 400px) {
@@ -169,6 +172,9 @@ body {
         grid-template-columns: repeat(2, 1fr);
         padding: 20px 2%;
         text-align: center;
+    }
+    .home{
+        opacity: 1;
     }
 }
 
