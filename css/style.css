@@ -71,15 +71,6 @@ body {
     transition: 4s;
 }
 
-/*different screen size image*/
-@media (max-width: 1200px) {
-    .home {
-        background-image: url('../images/final-image-small.jpg');
-        background-blend-mode: multiply;
-        text-align: center;
-    }
-    
-}
 
 @media (max-width: 660px) {
     .header {
@@ -139,12 +130,27 @@ body {
     opacity: 1;
 }
 
+/*different screen size image*/
+@media (max-width: 1200px) {
+    .home {
+        background-image: url('../images/final-image-small.jpg');
+        background-blend-mode: multiply;
+        text-align: center;
+    }
+
+    .home-content h3 {
+        color: #f58e2d;
+    }
+    
+}
+
+
 .about {
     background-color: inherit;
 }
 
 .coloring1 {
-    color:#14df68;
+    color: #40e0d0;
 }
 
 .content {
