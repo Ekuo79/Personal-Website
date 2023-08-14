@@ -201,7 +201,7 @@ body {
 }
 
 .image img {
-    max-width: 50%;
+    max-width: 90%;
     height: auto;
     border-radius: 10px;
     display: block;
@@ -439,6 +439,10 @@ body {
     .resume-btn {
         align-self: center;
         margin: 20px;
+    }
+    .image img {
+        max-width: 80%;
+        height: auto;
     }
 }
 
